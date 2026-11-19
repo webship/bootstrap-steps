@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toasts · Components demo</title>
+  <link rel="stylesheet" href="vendor/bootstrap-5.3.9/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Components demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Overlays</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+            <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+            <li><a class="dropdown-item active" aria-current="page" href="toasts.html">Toasts</a></li>
+            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Navigation</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+            <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+            <li><a class="dropdown-item" href="tabs.html">Navs and tabs</a></li>
+            <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+            <li><a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a></li>
+            <li><a class="dropdown-item" href="list-group.html">List group</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+            <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+            <li><a class="dropdown-item" href="collapse.html">Collapse and accordion</a></li>
+            <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+            <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+            <li><a class="dropdown-item" href="loading.html">Loading</a></li>
+            <li><a class="dropdown-item" href="progress.html">Progress</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+          </ul>
+          <form class="d-flex" role="search" action="index.html">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>Toasts</h1>
+    <p class="lead">Notifications that appear in a corner and hide themselves.</p>
+    <section class="mt-4" aria-labelledby="live-example">
+      <h2 id="live-example" class="h4">Live example</h2>
+      <p>The button shows a notification in the bottom corner. It hides itself after five seconds.</p>
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+    </section>
+
+    <section class="mt-5" aria-labelledby="quick">
+      <h2 id="quick" class="h4">A quick notification</h2>
+      <p>This one hides itself after four seconds.</p>
+      <button type="button" class="btn btn-primary" data-demo-toast="#draftToast">Save draft</button>
+    </section>
+
+    <section class="mt-5" aria-labelledby="sticky">
+      <h2 id="sticky" class="h4">A notification that stays</h2>
+      <p>Its automatic hiding is turned off: it stays until it is closed.</p>
+      <button type="button" class="btn btn-primary" data-demo-toast="#stickyToast">Show sticky toast</button>
+    </section>
+
+    <section class="mt-5" aria-labelledby="stacking">
+      <h2 id="stacking" class="h4">Stacking</h2>
+      <p>Notifications shown together stack in their container.</p>
+      <button type="button" class="btn btn-primary" data-demo-toast="#uploadStartedToast,#uploadFinishedToast">Show two toasts</button>
+    </section>
+
+    <section class="mt-5" aria-labelledby="custom-content">
+      <h2 id="custom-content" class="h4">Custom content</h2>
+      <p>A notification without a header, its close button beside its text.</p>
+      <button type="button" class="btn btn-primary" data-demo-toast="#plainToast">Show plain toast</button>
+    </section>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <span class="rounded me-2 bg-primary d-inline-block" style="width: 20px; height: 20px" aria-hidden="true"></span>
+          <strong class="me-auto">Reminder</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+      </div>
+      <div id="draftToast" class="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="4000">
+        <div class="toast-header">
+          <strong class="me-auto">Draft saved</strong>
+          <small>just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">Your draft was saved.</div>
+      </div>
+      <div id="stickyToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header">
+          <strong class="me-auto">Sticky note</strong>
+          <small>just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">This toast stays until you close it.</div>
+      </div>
+      <div id="uploadStartedToast" class="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header">
+          <strong class="me-auto">Upload started</strong>
+          <small class="text-body-secondary">just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">See? Just like this.</div>
+      </div>
+      <div id="uploadFinishedToast" class="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header">
+          <strong class="me-auto">Upload finished</strong>
+          <small class="text-body-secondary">2 seconds ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">Heads up, toasts will stack automatically</div>
+      </div>
+      <div id="plainToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div class="d-flex">
+          <div class="toast-body">A notification without a header.</div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-body-secondary">
+    <p class="mb-1">The components of Bootstrap 5.3.9, with the markup of its documentation and examples. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; the texts are adapted.</p>
+    <p class="mb-0"><a href="4.6/index.html">The same components on 4.6</a></p>
+  </footer>
+  <script src="vendor/bootstrap-5.3.9/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

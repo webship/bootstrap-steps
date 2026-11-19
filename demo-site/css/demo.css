@@ -1,0 +1,4 @@
+/* The demo's own few rules: the carousels keep a readable width. */
+.carousel {
+  max-width: 800px;
+}

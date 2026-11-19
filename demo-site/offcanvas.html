@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offcanvas · Components demo</title>
+  <link rel="stylesheet" href="vendor/bootstrap-5.3.9/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Components demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Overlays</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+            <li><a class="dropdown-item active" aria-current="page" href="offcanvas.html">Offcanvas</a></li>
+            <li><a class="dropdown-item" href="toasts.html">Toasts</a></li>
+            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Navigation</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+            <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+            <li><a class="dropdown-item" href="tabs.html">Navs and tabs</a></li>
+            <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+            <li><a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a></li>
+            <li><a class="dropdown-item" href="list-group.html">List group</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+            <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+            <li><a class="dropdown-item" href="collapse.html">Collapse and accordion</a></li>
+            <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+            <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+            <li><a class="dropdown-item" href="loading.html">Loading</a></li>
+            <li><a class="dropdown-item" href="progress.html">Progress</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+          </ul>
+          <form class="d-flex" role="search" action="index.html">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>Offcanvas</h1>
+    <p class="lead">Side panels that slide in from an edge of the page.</p>
+    <section class="mt-4" aria-labelledby="live-demo">
+      <h2 id="live-demo" class="h4">Live demo</h2>
+      <p>A link and a button open the same side panel, which slides in from the start of the page over a backdrop.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Link with href</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Button with data-bs-target</button>
+      </div>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="offcanvasExampleLabel">Offcanvas</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Panel actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="static-backdrop">
+      <h2 id="static-backdrop" class="h4">Static backdrop</h2>
+      <p>With a static backdrop, the side panel does not close when you click outside of it.</p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Toggle static offcanvas</button>
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="staticBackdropLabel">Static offcanvas</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>I will not close if you click outside of me.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="body-scrolling">
+      <h2 id="body-scrolling" class="h4">Body scrolling</h2>
+      <p>Without a backdrop, the page behind the side panel can still be scrolled and used.</p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Try scrolling the rest of the page to see this option in action.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="placement">
+      <h2 id="placement" class="h4">Placement</h2>
+      <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
+      </div>
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="offcanvasTopLabel">Offcanvas top</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">This panel slides down from the top.</div>
+      </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="offcanvasRightLabel">Offcanvas right</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">This panel slides in from the right.</div>
+      </div>
+      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5" id="offcanvasBottomLabel">Offcanvas bottom</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body small">This panel slides up from the bottom.</div>
+      </div>
+    </section>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-body-secondary">
+    <p class="mb-1">The components of Bootstrap 5.3.9, with the markup of its documentation and examples. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; the texts are adapted.</p>
+    <p class="mb-0"><a href="4.6/index.html">The same components on 4.6</a></p>
+  </footer>
+  <script src="vendor/bootstrap-5.3.9/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

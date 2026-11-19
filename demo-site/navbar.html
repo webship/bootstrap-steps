@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar · Components demo</title>
+  <link rel="stylesheet" href="vendor/bootstrap-5.3.9/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Components demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Overlays</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+            <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+            <li><a class="dropdown-item" href="toasts.html">Toasts</a></li>
+            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Navigation</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+            <li><a class="dropdown-item active" aria-current="page" href="navbar.html">Navbar</a></li>
+            <li><a class="dropdown-item" href="tabs.html">Navs and tabs</a></li>
+            <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+            <li><a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a></li>
+            <li><a class="dropdown-item" href="list-group.html">List group</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+            <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+            <li><a class="dropdown-item" href="collapse.html">Collapse and accordion</a></li>
+            <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+            <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+            <li><a class="dropdown-item" href="loading.html">Loading</a></li>
+            <li><a class="dropdown-item" href="progress.html">Progress</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+          </ul>
+          <form class="d-flex" role="search" action="index.html">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>Navbar</h1>
+    <p class="lead">Navigation bars that collapse behind a toggle button on narrow screens.</p>
+    <p>The bar at the top of every page of this demo collapses behind its toggle button below 992 pixels. Two more bars, from the navbar examples:</p>
+
+    <section class="mt-4" aria-labelledby="supported-content">
+      <h2 id="supported-content" class="h4">Supported content</h2>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary border rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Disabled</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search this bar" aria-label="Search this bar">
+              <button class="btn btn-outline-dark" type="submit">Go</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="mt-5" aria-labelledby="offcanvas-navbar">
+      <h2 id="offcanvas-navbar" class="h4">A bar that opens a side panel</h2>
+      <p>This bar has no breakpoint: its toggle button opens a side panel at every width.</p>
+      <nav class="navbar bg-body-tertiary border rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Offcanvas navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title h5" id="offcanvasNavbarLabel">Site menu</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Start</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Design</a></li>
+                    <li><a class="dropdown-item" href="#">Development</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Support</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-body-secondary">
+    <p class="mb-1">The components of Bootstrap 5.3.9, with the markup of its documentation and examples. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; the texts are adapted.</p>
+    <p class="mb-0"><a href="4.6/index.html">The same components on 4.6</a></p>
+  </footer>
+  <script src="vendor/bootstrap-5.3.9/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

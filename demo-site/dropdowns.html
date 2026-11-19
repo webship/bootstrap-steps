@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdowns · Components demo</title>
+  <link rel="stylesheet" href="vendor/bootstrap-5.3.9/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Components demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Overlays</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+            <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+            <li><a class="dropdown-item" href="toasts.html">Toasts</a></li>
+            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Navigation</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" aria-current="page" href="dropdowns.html">Dropdowns</a></li>
+            <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+            <li><a class="dropdown-item" href="tabs.html">Navs and tabs</a></li>
+            <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+            <li><a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a></li>
+            <li><a class="dropdown-item" href="list-group.html">List group</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+            <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+            <li><a class="dropdown-item" href="collapse.html">Collapse and accordion</a></li>
+            <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+            <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+            <li><a class="dropdown-item" href="loading.html">Loading</a></li>
+            <li><a class="dropdown-item" href="progress.html">Progress</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+          </ul>
+          <form class="d-flex" role="search" action="index.html">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>Dropdowns</h1>
+    <p class="lead">Menus that drop down from a button or a link.</p>
+    <section class="mt-4" aria-labelledby="single-button">
+      <h2 id="single-button" class="h4">Single button</h2>
+      <div class="d-flex flex-wrap gap-2">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">First link</a></li>
+            <li><a class="dropdown-item" href="#">Second link</a></li>
+            <li><a class="dropdown-item" href="#">Third link</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="split-button">
+      <h2 id="split-button" class="h4">Split button</h2>
+      <p>The menu opens from the small button beside the main one, which has its own action.</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Publish</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Publish now</a></li>
+          <li><a class="dropdown-item" href="#">Schedule</a></li>
+          <li><a class="dropdown-item" href="#">Save as draft</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="menu-items">
+      <h2 id="menu-items" class="h4">Active and disabled items</h2>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Item states</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Regular link</a></li>
+          <li><a class="dropdown-item active" href="#" aria-current="true">Active link</a></li>
+          <li><a class="dropdown-item disabled" aria-disabled="true">Disabled link</a></li>
+          <li><a class="dropdown-item" href="#">Another link</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="choice">
+      <h2 id="choice" class="h4">A choice that changes the page</h2>
+      <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Choose a size</button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button" data-demo-choice="Small">Small</button></li>
+          <li><button class="dropdown-item" type="button" data-demo-choice="Medium">Medium</button></li>
+          <li><button class="dropdown-item" type="button" data-demo-choice="Large">Large</button></li>
+        </ul>
+      </div>
+      <p class="mt-2" id="choice-output" aria-live="polite">No size chosen yet.</p>
+    </section>
+
+    <section class="mt-5" aria-labelledby="auto-close">
+      <h2 id="auto-close" class="h4">Auto close behavior</h2>
+      <p>By default a menu closes when you click inside or outside of it; these four close in other ways.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Default dropdown</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Default item</a></li>
+            <li><a class="dropdown-item" href="#">Second default item</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">Clickable inside</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Inside item</a></li>
+            <li><a class="dropdown-item" href="#">Second inside item</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Clickable outside</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Outside item</a></li>
+            <li><a class="dropdown-item" href="#">Second outside item</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">Manual close</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Manual item</a></li>
+            <li><a class="dropdown-item" href="#">Second manual item</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="forms">
+      <h2 id="forms" class="h4">A form in a menu</h2>
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Dropdown form</button>
+        <form class="dropdown-menu p-4" style="min-width: 18rem">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+              <label class="form-check-label" for="dropdownCheck2">Remember me</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="directions">
+      <h2 id="directions" class="h4">Directions</h2>
+      <div class="d-flex flex-wrap gap-2">
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropup</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Up action</a></li>
+            <li><a class="dropdown-item" href="#">Another up action</a></li>
+          </ul>
+        </div>
+        <div class="btn-group dropend">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropend</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">End action</a></li>
+            <li><a class="dropdown-item" href="#">Another end action</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-body-secondary">
+    <p class="mb-1">The components of Bootstrap 5.3.9, with the markup of its documentation and examples. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; the texts are adapted.</p>
+    <p class="mb-0"><a href="4.6/index.html">The same components on 4.6</a></p>
+  </footer>
+  <script src="vendor/bootstrap-5.3.9/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

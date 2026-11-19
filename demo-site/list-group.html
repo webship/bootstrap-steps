@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List group · Components demo</title>
+  <link rel="stylesheet" href="vendor/bootstrap-5.3.9/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Components demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Overlays</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="modal.html">Modal</a></li>
+            <li><a class="dropdown-item" href="offcanvas.html">Offcanvas</a></li>
+            <li><a class="dropdown-item" href="toasts.html">Toasts</a></li>
+            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Navigation</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="dropdowns.html">Dropdowns</a></li>
+            <li><a class="dropdown-item" href="navbar.html">Navbar</a></li>
+            <li><a class="dropdown-item" href="tabs.html">Navs and tabs</a></li>
+            <li><a class="dropdown-item" href="pagination.html">Pagination</a></li>
+            <li><a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a></li>
+            <li><a class="dropdown-item active" aria-current="page" href="list-group.html">List group</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="alerts.html">Alerts</a></li>
+            <li><a class="dropdown-item" href="badges.html">Badges</a></li>
+            <li><a class="dropdown-item" href="collapse.html">Collapse and accordion</a></li>
+            <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+            <li><a class="dropdown-item" href="spinners.html">Spinners</a></li>
+            <li><a class="dropdown-item" href="loading.html">Loading</a></li>
+            <li><a class="dropdown-item" href="progress.html">Progress</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+          </ul>
+          <form class="d-flex" role="search" action="index.html">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>List group</h1>
+    <p class="lead">Lists with active and disabled items, badges, and a list that works as tabs.</p>
+    <section class="mt-4" aria-labelledby="active-disabled">
+      <h2 id="active-disabled" class="h4">Active and disabled items</h2>
+      <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">An active item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+    </section>
+
+    <section class="mt-5" aria-labelledby="links">
+      <h2 id="links" class="h4">Links and buttons</h2>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">The current link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="with-badges">
+      <h2 id="with-badges" class="h4">With badges</h2>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">Inbox messages</div>
+          <span class="badge text-bg-primary rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">Drafts</div>
+          <span class="badge text-bg-primary rounded-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">Archived messages</div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-5" aria-labelledby="list-tabs">
+      <h2 id="list-tabs" class="h4">A list that works as tabs</h2>
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Getting started</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Account settings</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Billing</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list" tabindex="0">Create an account, then add your first project.</div>
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list" tabindex="0">Change your name, your address and your password.</div>
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list" tabindex="0">See your invoices and change how you pay.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-body-secondary">
+    <p class="mb-1">The components of Bootstrap 5.3.9, with the markup of its documentation and examples. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; the texts are adapted.</p>
+    <p class="mb-0"><a href="4.6/index.html">The same components on 4.6</a></p>
+  </footer>
+  <script src="vendor/bootstrap-5.3.9/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

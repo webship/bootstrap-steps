@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Collapse and accordion · Components demo (4.6)</title>
+  <link rel="stylesheet" href="vendor/bootstrap-4.6.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main">
+      <a class="navbar-brand" href="index.html">Components demo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overlays</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="modal.html">Modal</a>
+            <a class="dropdown-item" href="toasts.html">Toasts</a>
+            <a class="dropdown-item" href="tooltips.html">Tooltips</a>
+            <a class="dropdown-item" href="popovers.html">Popovers</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Navigation</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="dropdowns.html">Dropdowns</a>
+            <a class="dropdown-item" href="navbar.html">Navbar</a>
+            <a class="dropdown-item" href="tabs.html">Navs and tabs</a>
+            <a class="dropdown-item" href="pagination.html">Pagination</a>
+            <a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a>
+            <a class="dropdown-item" href="list-group.html">List group</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="alerts.html">Alerts</a>
+            <a class="dropdown-item" href="badges.html">Badges</a>
+            <a class="dropdown-item active" aria-current="page" href="collapse.html">Collapse and accordion</a>
+            <a class="dropdown-item" href="carousel.html">Carousel</a>
+            <a class="dropdown-item" href="spinners.html">Spinners</a>
+            <a class="dropdown-item" href="loading.html">Loading</a>
+            <a class="dropdown-item" href="progress.html">Progress</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" role="search" action="index.html">
+          <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>Collapse and accordion</h1>
+    <p class="lead">Content that a button shows and hides.</p>
+    <section class="mt-4" aria-labelledby="collapse-example">
+      <h2 id="collapse-example" class="h4">Collapse</h2>
+      <p>A link and a button show and hide the same content.</p>
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Show details</a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Toggle details</button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.</div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="multiple">
+      <h2 id="multiple" class="h4">Multiple toggles and targets</h2>
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">Some placeholder content for the first collapse component of this multi-collapse example.</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">Some placeholder content for the second collapse component of this multi-collapse example.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="accordion">
+      <h2 id="accordion" class="h4">Accordion</h2>
+      <p>Opening an item closes the one that was open.</p>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h3 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
+            </h3>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body"><strong>This is the first item’s accordion body.</strong> It is shown by default, thanks to the <code>.show</code> class.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h3 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button>
+            </h3>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body"><strong>This is the second item’s accordion body.</strong> It is hidden by default.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h3 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button>
+            </h3>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body"><strong>This is the third item’s accordion body.</strong> It is hidden by default.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="always-open">
+      <h2 id="always-open" class="h4">Accordion that stays open</h2>
+      <p>Without a parent, each item opens and closes on its own.</p>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="card">
+          <div class="card-header" id="stayOpenHeadingOne">
+            <h3 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Shipping address</button>
+            </h3>
+          </div>
+          <div id="panelsStayOpen-collapseOne" class="collapse show" aria-labelledby="stayOpenHeadingOne">
+            <div class="card-body">Where the order is sent: the street, the city and the postal code.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="stayOpenHeadingTwo">
+            <h3 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">Billing address</button>
+            </h3>
+          </div>
+          <div id="panelsStayOpen-collapseTwo" class="collapse" aria-labelledby="stayOpenHeadingTwo">
+            <div class="card-body">Where the invoice is sent, when it is not the shipping address.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="stayOpenHeadingThree">
+            <h3 class="mb-0">
+              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">Payment</button>
+            </h3>
+          </div>
+          <div id="panelsStayOpen-collapseThree" class="collapse" aria-labelledby="stayOpenHeadingThree">
+            <div class="card-body">Pay by bank transfer, by cheque or on delivery.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-muted">
+    <p class="mb-1">The components of Bootstrap 4.6.2, with the markup of its documentation. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; jQuery's code under the MIT licence, by the OpenJS Foundation and its contributors; the texts are adapted.</p>
+    <p class="mb-0"><a href="../index.html">The same components on 5.3</a></p>
+  </footer>
+  <script src="vendor/jquery-3.5.1/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

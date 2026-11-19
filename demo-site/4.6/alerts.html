@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Alerts · Components demo (4.6)</title>
+  <link rel="stylesheet" href="vendor/bootstrap-4.6.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main">
+      <a class="navbar-brand" href="index.html">Components demo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overlays</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="modal.html">Modal</a>
+            <a class="dropdown-item" href="toasts.html">Toasts</a>
+            <a class="dropdown-item" href="tooltips.html">Tooltips</a>
+            <a class="dropdown-item" href="popovers.html">Popovers</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Navigation</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="dropdowns.html">Dropdowns</a>
+            <a class="dropdown-item" href="navbar.html">Navbar</a>
+            <a class="dropdown-item" href="tabs.html">Navs and tabs</a>
+            <a class="dropdown-item" href="pagination.html">Pagination</a>
+            <a class="dropdown-item" href="breadcrumb.html">Breadcrumb</a>
+            <a class="dropdown-item" href="list-group.html">List group</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item active" aria-current="page" href="alerts.html">Alerts</a>
+            <a class="dropdown-item" href="badges.html">Badges</a>
+            <a class="dropdown-item" href="collapse.html">Collapse and accordion</a>
+            <a class="dropdown-item" href="carousel.html">Carousel</a>
+            <a class="dropdown-item" href="spinners.html">Spinners</a>
+            <a class="dropdown-item" href="loading.html">Loading</a>
+            <a class="dropdown-item" href="progress.html">Progress</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="validation.html">Forms</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" role="search" action="index.html">
+          <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container py-4">
+    <h1>Alerts</h1>
+    <p class="lead">Messages for the person on the page, some of them dismissible.</p>
+    <section class="mt-4" aria-labelledby="examples">
+      <h2 id="examples" class="h4">Alerts of each kind</h2>
+      <div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+      <div class="alert alert-secondary" role="alert">A simple secondary alert—check it out!</div>
+      <div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
+      <div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
+      <div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>
+      <div class="alert alert-info" role="alert">A simple info alert—check it out!</div>
+      <div class="alert alert-light" role="alert">A simple light alert—check it out!</div>
+      <div class="alert alert-dark" role="alert">A simple dark alert—check it out!</div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="additional-content">
+      <h2 id="additional-content" class="h4">Additional content</h2>
+      <div class="alert alert-success" role="alert">
+        <h3 class="alert-heading h4">Well done!</h3>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="dismissing">
+      <h2 id="dismissing" class="h4">Dismissing</h2>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        Our office is closed on Friday.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    </section>
+
+    <section class="mt-5" aria-labelledby="live-example">
+      <h2 id="live-example" class="h4">Live example</h2>
+      <p>The button adds an alert to the page; each one can be dismissed.</p>
+      <div id="liveAlertPlaceholder"></div>
+      <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+    </section>
+  </main>
+  <footer class="container py-4 mt-4 border-top small text-muted">
+    <p class="mb-1">The components of Bootstrap 4.6.2, with the markup of its documentation. Bootstrap's code is released under the MIT licence and its documentation under CC BY 3.0, both by The Bootstrap Authors; jQuery's code under the MIT licence, by the OpenJS Foundation and its contributors; the texts are adapted.</p>
+    <p class="mb-0"><a href="../index.html">The same components on 5.3</a></p>
+  </footer>
+  <script src="vendor/jquery-3.5.1/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap-4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>
