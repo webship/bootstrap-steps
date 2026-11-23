@@ -36,7 +36,7 @@ Bootstrap 5 and runs the pack's steps there too; see
 
 ## From nothing to a green run
 
-What the machine needs: git, Node.js 20 or later with npm, and Docker with
+What the machine needs: git, Node.js 24 or later with npm, and Docker with
 [DDEV](https://ddev.com) for the demo site (or no container at all: `npx
 http-server` serves the same pages).
 
@@ -207,7 +207,7 @@ events, not colours).
 
 ## Requirements
 
-- Node.js 20 or later
+- Node.js 24 or later
 - A webship-js 2.0 test project (webship-js 2.0.16 or later)
 - A site that uses the components of version 5.3 (or 4.6), with their script
 
