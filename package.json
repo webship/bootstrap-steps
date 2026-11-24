@@ -1,6 +1,6 @@
 {
   "name": "@webship-js/bootstrap-steps",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cucumber step definitions for the components of any site that uses Bootstrap 5.3 (and 4.6 where the same step holds), a plugin for webship-js (Playwright and Cucumber): dialogs, side panels, drop-down menus, panels and accordions, tabs, the navigation bar, alerts, notifications, carousels, tooltips, popovers, form validation states, list groups, pagination, breadcrumbs, badges, spinners and progress bars, each step waiting on the component's own events and states, never on a fixed time.",
   "main": "tests/step-definitions/bootstrap-helpers.js",
   "files": [
